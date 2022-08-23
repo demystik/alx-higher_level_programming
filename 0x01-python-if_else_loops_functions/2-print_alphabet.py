@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-print("".join(map(lambda o: chr(o), range(97, 97+26))))
+for i in range(97, 97+26):
+    print(chr(i),end="")
+
