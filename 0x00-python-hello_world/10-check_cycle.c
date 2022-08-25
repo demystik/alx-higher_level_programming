@@ -13,6 +13,9 @@ int check_cycle(listint_t *list)
 	listint_t *check;
 	listint_t *h;
 
+	if (!list)
+		return (0);
+
 	check = list;
 	h = list;
 	while (check != NULL)
