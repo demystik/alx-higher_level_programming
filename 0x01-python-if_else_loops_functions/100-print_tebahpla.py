@@ -6,4 +6,3 @@ while i != 96:
         n = ord(chr(n)) - 32
     print("{}".format(chr(n)), end="")
     i = i - 1
-
