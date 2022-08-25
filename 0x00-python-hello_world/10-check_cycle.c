@@ -11,17 +11,18 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *check;
-	listint_t *h;
+	listint_t *follow;
 
 	if (!list)
 		return (0);
 
 	check = list;
-	h = list;
-	while (check != NULL)
+	follow = list;
+	while (check && follow && check->next)
 	{
-		check = check->next;
-		if (check == h)
+		follow = follow->next;
+		check = check->next->next;
+		if (check == follow)
 			return (1);
 	}
 	return (0);
