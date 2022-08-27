@@ -10,5 +10,5 @@ elif lenght == 1:
     print("1 argument:")
 else:
     print("{}: arguments".format(lenght))
-for i in range(lenght + 0):
+for i in range(lenght):
     print("{}: {}".format((i + 1), arg[i + 1]))
