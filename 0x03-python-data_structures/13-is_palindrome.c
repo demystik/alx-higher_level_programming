@@ -1,51 +1,72 @@
 #include "lists.h"
-#include <stdio.h>
+
 /**
- * is_palindrome - This function checks if a singly
- * list is palindrome
- * @head: pointer to the head node
- * Author - Abdrasheed Thaoban
- * Return: 0 if it is not and 1 if it is
+ * reverse_listint - reverses a linked list
+ * @head: pointer to the first node in the list
+ *
+ * Return: pointer to the first node in the new list
+ */
+void reverse_listint(listint_t **head)
+{
+	listint_t *prev = NULL;
+	listint_t *current = *head;
+	listint_t *next = NULL;
+
+	while (current)
+	{
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
+	}
+
+	*head = prev;
+}
+
+/**
+ * is_palindrome - checks if a linked list is a palindrome
+ * @head: double pointer to the linked list
+ *
+ * Return: 1 if it is, 0 if not
  */
 int is_palindrome(listint_t **head)
 {
-	int i, j, k;
-	int bol = 0;
-	listint_t *ptr;
-	listint_t *loop;
+	listint_t *slow = *head, *fast = *head, *temp = *head, *dup = NULL;
 
-	ptr = *head;
-	loop = ptr;
-	i = 0;
-	j = 0;
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
-	while (ptr != NULL)
-	{
-		ptr = ptr->next;
-		i++;
-	}
-	int arr[i];
 
-	while (loop != NULL)
+	while (1)
 	{
-		arr[j] = loop->n;
-		j++;
-		loop = loop->next;
-	}
-	j = sizeof(arr) / sizeof(int);
-	j--;
-	k = j;
-	i = 0;
-	while (i <= k)
-	{
-		/* printf("i si %d and j is %d\n", arr[i], arr[j]); */
-		if (arr[i] != arr[j])
-			bol = 1;
-		i++, j--;
+		fast = fast->next->next;
+		if (!fast)
+		{
+			dup = slow->next;
+			break;
+		}
+		if (!fast->next)
+		{
+			dup = slow->next->next;
+			break;
+		}
+		slow = slow->next;
 	}
 
-	if (bol == 1)
-		return (0);
-return (1);
+	reverse_listint(&dup);
+
+	while (dup && temp)
+	{
+		if (temp->n == dup->n)
+		{
+			dup = dup->next;
+			temp = temp->next;
+		}
+		else
+			return (0);
+	}
+
+	if (!dup)
+		return (1);
+
+	return (0);
 }
