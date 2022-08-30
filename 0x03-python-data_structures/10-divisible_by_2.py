@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 def divisible_by_2(my_list=[]):
     new_list = []
+    if len(my_list)) == 0:
+        return "None"
     for i in range(len(my_list)):
         pass
-    if i == 0:
-        return "None"
     i += 1
     for j in range(i):
         if my_list[j] % 2 == 0:
