@@ -8,4 +8,4 @@ def safe_print_list_integers(my_list=[], x=0):
         except (ValueError, IndentationError, TypeError):
             continue
     print("")
-    return x
+    return (num)
