@@ -1,0 +1,34 @@
+The ``example`` module
+======================
+
+Using ``factorial``
+-------------------
+
+This is an example text file in reStructuredText format. First import ``factorial`` from the ``example`` module:
+
+	>>> from ex import factorial
+
+Now use it:
+
+	>>> factorial(6)
+	720
+
+	>>> factorial(5)
+	120
+
+	>>> [factorial(n) for n in range(6)]
+	[1, 1, 2, 6, 24, 120]
+
+	>>> factorial(30)
+	265252859812191058636308480000000
+
+	>>> factorial(-1)
+	Traceback (most recent call last):
+		...
+	ValueError: n must be >= 0
+
+
+	>>> factorial(30.1)
+	Traceback (most recent call last):
+		...
+	ValueError: n must be exact integer
