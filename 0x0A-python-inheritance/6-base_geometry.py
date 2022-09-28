@@ -2,6 +2,6 @@
 """This function defines a BaseG class"""
 
 
-class BaseGeometry():
+class BaseGeometry:
     """Base Geometry class"""
     raise Exception("area() is not implemented")
