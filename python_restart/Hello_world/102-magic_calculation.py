@@ -1,5 +1,9 @@
+#!/usr/bin/python3
+import dis
+
 """
-3           0 LOAD_FAST                0 (a)
+
+  3           0 LOAD_FAST                0 (a)
               3 LOAD_FAST                1 (b)
               6 COMPARE_OP               0 (<)
               9 POP_JUMP_IF_FALSE       16
@@ -23,13 +27,17 @@
              43 LOAD_FAST                2 (c)
              46 BINARY_SUBTRACT
              47 RETURN_VALUE
-
 """
 
 
 
-# include <time.h>
-# time_t t1;
-# srand((unsigned)time(&t1));
-# num1 = rand()
-# num2 = rand()
+def magic_calculation(a, b, c):
+    if a < b:
+        return c
+    if c > b:
+        return a + b
+    return a * b - c
+
+bytecode = dis.Bytecode(magic_calculation)
+for instr in bytecode:
+    print(instr.opname)
