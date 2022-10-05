@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """This function prints a square with the character #"""
+
+
 def print_square(size):
     """prints a square with the character #
     Raises:
