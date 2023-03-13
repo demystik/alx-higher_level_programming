@@ -1,4 +1,5 @@
-#!usr/bin/node
+#!/usr/bin/node
+
 const cIsFun = 'C is fun';
 const python = 'Python is cool';
 const js = 'JavaScript is amazing';
