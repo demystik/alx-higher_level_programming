@@ -9,7 +9,7 @@ if (Number(args[2])) {
     count.push('X');
   }
   for (let i = 0; i < Number(args[2]); i++) {
-    console.log(...count);
+    console.log(count.join(""));
   }
 } else {
   console.log('Missing size');
