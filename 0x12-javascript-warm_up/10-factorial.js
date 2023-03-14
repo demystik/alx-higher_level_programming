@@ -3,18 +3,18 @@
 const process = require('process');
 let get = 0;
 args = process.argv;
-const num = args[2];
+const num = Number(args[2]);
 
-if (!(args[2])) {
-  console.log('1');
-} else {
-  factorial(Number(args[2]));
-  console.log(get);
-}
-function factorial(num) {
-  get = get + num;
-  num--;
-  while (num > 0) {
-    factorial(num);
+
+function factorial (num) {
+  if (num < 0) {
+    return (-1);
   }
+  if (num === 0 || isNaN(num)) {
+    return (1);
+  }
+  return (num * factorial(num - 1));
+  
 }
+
+console.log(factorial(num));
