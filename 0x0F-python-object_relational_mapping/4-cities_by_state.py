@@ -22,4 +22,4 @@ if __name__ == "__main__":
         print(line)
 
     get.close()
-db.close()
+    db.close()
