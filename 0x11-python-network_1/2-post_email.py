@@ -4,10 +4,10 @@ to the passed URL with the email as a parameter, and displays the body
 of the response (decoded in utf-8)
 """
 
-import sys
-from urllib import request, parse
-
 if __name__ == "__main__":
+    import sys
+    from urllib import request, parse
+
     url = sys.argv[1]
     email = {"email": sys.argv[2]}
     send_post_req = (url, email)
