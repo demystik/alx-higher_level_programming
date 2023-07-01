@@ -9,7 +9,7 @@ from urllib import request, parse
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    email = {"email":sys.argv[2]}
+    email = {"email": sys.argv[2]}
     send_post_req = (url, email)
 
     def send_post_request(url, email):
