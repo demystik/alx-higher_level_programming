@@ -13,6 +13,8 @@ if __name__ == "__main__":
     send_post_req = (url, email)
 
     def send_post_request(url, email):
+        """This function does this and that"""
+
         data = parse.urlencode(email).encode("ascii")
 
         request = urllib.request.Request(url, data, method="POST")
