@@ -12,8 +12,8 @@ if __name__ == "__main__":
     send_post_req = (url, email)
 
     def send_post_request(url, email):
-        data = parse.urlencode({'email': email}).encode('utf-8')
-        request = urllib.request.Request(url, data=data, methon='POST')
+        data = parse.urlencode({'email': email}).encode('ascii')
+        request = urllib.request.Request(url, data=data, method='POST')
         with request.urlopen(request) as response:
             body = response.read().decode('utf-8')
             print(body)
