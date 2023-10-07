@@ -10,7 +10,5 @@ const content = args[1];
 fs.writeFile(filePath, content, 'utf8', (error) => {
   if (error) {
     console.error(error);
-    return;
   }
-
 });
