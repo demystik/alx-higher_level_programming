@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 exports.converter = function (base) {
   // Define a recursive helper function
   const convertRecursive = (number, result) => {
