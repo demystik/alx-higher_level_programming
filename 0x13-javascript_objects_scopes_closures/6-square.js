@@ -8,7 +8,7 @@ class Square extends supSquare {
   }
 
   charPrint (c) {
-    if (!c) { c = 'X'; }
+    if (c === undefined) { c = 'X'; }
     let shape = '';
     for (let i = 0; i < this.size; i++) {
       for (let j = 0; j < this.size; j++) {
