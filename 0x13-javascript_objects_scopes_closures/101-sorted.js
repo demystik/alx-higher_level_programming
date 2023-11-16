@@ -1,4 +1,4 @@
-#!/usr/bin/ndoe
+#!/usr/bin/node
 const data = require('./101-data');
 
 // Original dictionary
