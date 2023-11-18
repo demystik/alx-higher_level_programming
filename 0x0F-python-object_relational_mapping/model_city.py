@@ -15,5 +15,5 @@ class City(Base):
     """
     __tablename__ = "cities"
     id = Column(Integer, unique=True, nullabe=False, primary_key=True)
-    name = Column(String(128) nullable=False)
+    name = Column(String(128), nullable=False)
     state_id = Column(Integer, nullable=False, ForiegnKey('states.id'))
