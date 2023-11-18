@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" takes in an argument and displays all values in the states table 
+"""takes in an argument and displays all values in the states table
 of hbtn_0e_0_usa where name matches the argument"""
 
 import sys
@@ -17,9 +17,9 @@ if __name__ == "__main__":
 
     cursor = db_conn.cursor()
 
-    userInput = sys.argv[4]
-    sql_command = f"SELECT * FROM states WHERE NAME = %s"
-    cursor.execute(sql_command, (userInput,))
+    sql_command = "SELECT * FROM states WHERE NAME LIKE BINARY '{}'".format(
+            sys.argv[4])
+    cursor.execute(sql_command)
 
     states = cursor.fetchall()
     for state in states:
