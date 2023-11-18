@@ -18,8 +18,8 @@ if __name__ == "__main__":
     session = Session()
  
     cal = session.query(State).first()
-    if cal:
-        print(f"{cal.id}: {cal.name}")
-    else:
+    if cal is None:
         print("Nothing")
+    else:
+        print(f"{cal.id}: {cal.name}")
     session.close()
