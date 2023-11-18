@@ -21,5 +21,5 @@ if __name__ == "__main__":
     if cal:
         print(f"{cal.id}: {cal.name}")
     else:
-        print("")
+        print("Nothing")
     session.close()
