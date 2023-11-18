@@ -3,7 +3,7 @@
 import sys
 import MySQLdb
 
-""" This script takes in the name of a state as an argument and 
+""" This script takes in the name of a state as an argument and
 lists all cities of that state, using the database hbtn_0e_4_usa"""
 
 if __name__ == "__main__":
@@ -25,4 +25,4 @@ if __name__ == "__main__":
     tmp = list(row[0] for row in rows)
     print(*tmp, sep=", ")
     cur.close()
-    db.close()
+    db_conn.close()
