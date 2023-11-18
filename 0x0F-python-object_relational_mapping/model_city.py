@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+Contains the class definition of a City
+"""
+
 from sqlalchemy import ForeignKey, String, Integer, Column
 from model_state import Base
 from sqlalchemy.ext.declarative import declarative_base
