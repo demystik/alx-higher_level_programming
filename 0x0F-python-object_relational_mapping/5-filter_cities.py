@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
-import sys
-import MySQLdb
-
 """ This script takes in the name of a state as an argument and
 lists all cities of that state, using the database hbtn_0e_4_usa"""
+
+import MySQLdb
+import sys
+
 
 if __name__ == "__main__":
 
