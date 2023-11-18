@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""model state from which create a table to be inherited from"""
+"""model state from which create a table to be inherited from
+model state from which create a table to be inherited from"""
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, MetaData
