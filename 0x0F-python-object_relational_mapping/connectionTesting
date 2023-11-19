@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+
+import sys
+import MySQLdb
+
+#Function to connect to mysql db
+def mysqlconnect():
+    #try to connect
+    try:
+        db_connection= MySQLdb.connect(
+                host="localhost", 
+                port=3306, 
+                user="root", 
+                passwd="password",
+                db="BCH_DB")
+    #if connection is not successful
+    except:
+        print("Can't connect to the DB")
+        return 0
+    #If connection is successful
+    print("Connected")
+    
+    #Making cursor object for query execution
+    cursor=db_connection.cursor()
+
+    #Executing query
+    cursor.execute("SELECT CURDATE();")
+
+    #Fetching data
+    m = cursor.fetchone()
+
+    #Printing result above
+    print("Today's Date Is ",m[0])
+
+    #close db
+    db_connection.close()
+
+mysqlconnect()
