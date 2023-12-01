@@ -75,3 +75,7 @@ Star Wars API, GitHub API, and Twitter API).
   the 10 most recent comments of a given GitHub repository using the GitHub API.
   * Usage: `./100-github_commits.py <repository name> <owner name>`
 	* Uses `requests`.
+  **Resources**
+	`https://docs.python.org/3/howto/urllib2.html`
+	`(https://pypi.org/project/requests/`
+  `https://requests.readthedocs.io/en/latest/`
